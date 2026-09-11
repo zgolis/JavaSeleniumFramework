@@ -1,18 +1,27 @@
-## Getting Started
+JavaSeleniumFramework
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is a generic test framework based on a Contact Us page.
+Steps / Expected Results:
+Test Case 1: ContactUs_Required
 
-## Folder Structure
+    Navigate to 'Contact Us' page E. Page loads with required items displayed and required and no invalid feedback text is displayed.
 
-The workspace contains two folders by default, where:
+    Click the submit button. E. Invalid feedback text is displayed for all but Address 2.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+    Verify each invalid feedback text is present with text that matches. E. Invalid feedback text displays correctly.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Test Case 2: ContactUs_Validate
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+    Navigate to 'Contact Us' page. E. Page loads with a header, 6 input fields, 2 selects and 1 button to submit displayed.
 
-## Dependency Management
+    Validate both selects contain all their options. E. Country select has 2 options and State has three options and each are displayed correctly.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Test Case 3: ContactUs_Verify
+
+    Navigate to 'Contact Us' page. E. Page loads.
+
+    Fill out all available fields. E. Each field displays the correctly inputted information.
+
+    Click the submit button. E. New page loads with specific success text.
+
+    Click the 'Back' link. E. Previous page loads.
